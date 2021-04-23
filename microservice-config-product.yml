@@ -32,7 +32,7 @@ eureka:
       serviceUrl: 
         defaultZone: http://eureka6001.com:6001/eureka
     instance:
-      instanceId: ${spring.application.name}:${server.port}
+      instance-id: ${spring.application.name}:${server.port}
       prefer-ip-address: true
 ---
 server:
@@ -42,7 +42,7 @@ mybatis:
   type-aliases-package: com.mengxuegu.springcloud.entities
   mapper-locations: classpath:mybatis/mapper/**/*.xml
 spring:
-  profiles:prod #生产环境
+  profiles: prod #生产环境
   application: 
     name: microservice-product-config
   datasource: 
@@ -63,5 +63,5 @@ eureka:
       serviceUrl: 
         defaultZone: http://eureka6001.com:6001/eureka
     instance:
-      instanceId: ${spring.application.name}:${server.port}
+      instance-id: ${spring.application.name}:${server.port}
       prefer-ip-address: true
